@@ -67,7 +67,7 @@ const CountdownTimer = () => {
       </div>
       
       <p className="text-lg text-gray-600 text-center">
-        Until Mehfil goes live! 🚀
+        Until Mahfil goes live! 🚀
       </p>
     </div>
   );
@@ -126,11 +126,11 @@ export default function Home() {
           <div className="flex items-center space-x-3">
             <img 
               src="/logo400x400.png" 
-              alt="Mehfil Logo" 
+              alt="Mahfil Logo" 
               className="w-10 h-10 object-contain"
             />
             <h1 className="text-2xl font-bold text-gray-800">
-              Mehfil
+              Mahfil
             </h1>
             <div className="hidden sm:flex items-center ml-3">
               <span className="bg-gradient-to-r from-purple-400 to-green-400 text-white text-xs font-bold px-2 py-1 rounded-full">
@@ -662,7 +662,7 @@ export default function Home() {
                   </button>
                   
                   <p className="text-xs text-gray-500 text-center">
-                    By joining, you'll receive exclusive updates and early access to Mehfil.
+                    By joining, you'll receive exclusive updates and early access to Mahfil.
                   </p>
                 </form>
               )}
@@ -789,15 +789,15 @@ export default function Home() {
             <div className="flex items-center space-x-3 mb-6 md:mb-0">
               <img 
                 src="/logo400x400.png" 
-                alt="Mehfil Logo" 
+                alt="Mahfil Logo" 
                 className="w-10 h-10 object-contain"
               />
-              <h1 className="text-2xl font-bold text-white">Mehfil</h1>
+              <h1 className="text-2xl font-bold text-white">Mahfil</h1>
               <span className="text-purple-400 text-sm">🇺🇸 Made in the USA</span>
             </div>
             <div className="text-center md:text-right">
               <p className="text-gray-400 mb-2">Building the future of events with AI</p>
-              <p className="text-gray-500 text-sm">© 2024 Mehfil. All rights reserved. • AI-Powered Events Platform</p>
+              <p className="text-gray-500 text-sm">© 2025 Mahfil. All rights reserved. • AI-Powered Events Platform</p>
             </div>
           </div>
         </div>
