@@ -186,21 +186,20 @@ export default function Home() {
               Connect with vendors who understand your traditions, plan your dream event, and grow your business with intelligent technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a 
-                href="#waitlist" 
-                className="text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden"
+              <button 
+                type="button"
+                className="text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center space-x-2 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl relative overflow-hidden cursor-pointer"
                 style={{
                   background: 'linear-gradient(135deg, #C4AAD9 0%, #9CAE89 50%, #E8B4B4 100%)'
                 }}
-                onClick={(e) => {
-                  e.preventDefault();
+                onClick={() => {
                   document.getElementById('waitlist')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
                 <span className="relative z-10">Join the Platform</span>
                 <ArrowRight className="w-5 h-5 relative z-10" />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 -translate-x-full animate-pulse"></div>
-              </a>
+              </button>
               <div className="flex items-center space-x-2 text-gray-600">
                 <div className="flex -space-x-2">
                   <div className="w-8 h-8 rounded-full bg-purple-200 border-2 border-white animate-pulse"></div>
@@ -214,12 +213,12 @@ export default function Home() {
         </div>
         
         {/* Futuristic decorative elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 rounded-full opacity-20 animate-pulse" style={{backgroundColor: '#C4AAD9'}}></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 rounded-full opacity-20 animate-pulse delay-1000" style={{backgroundColor: '#9CAE89'}}></div>
-        <div className="absolute top-1/2 right-20 w-16 h-16 rounded-full opacity-15 animate-pulse delay-500" style={{backgroundColor: '#E8B4B4'}}></div>
+        <div className="absolute top-20 left-10 w-20 h-20 rounded-full opacity-20 animate-pulse -z-10" style={{backgroundColor: '#C4AAD9'}}></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 rounded-full opacity-20 animate-pulse delay-1000 -z-10" style={{backgroundColor: '#9CAE89'}}></div>
+        <div className="absolute top-1/2 right-20 w-16 h-16 rounded-full opacity-15 animate-pulse delay-500 -z-10" style={{backgroundColor: '#E8B4B4'}}></div>
         
         {/* Tech grid pattern */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-5 -z-10 pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-full" style={{
             backgroundImage: `linear-gradient(rgba(196, 170, 217, 0.1) 1px, transparent 1px),
                               linear-gradient(90deg, rgba(196, 170, 217, 0.1) 1px, transparent 1px)`,
@@ -525,29 +524,7 @@ export default function Home() {
             </p>
             
             {/* Cultural Stats */}
-            <div className="border-2 rounded-3xl p-8 mb-12" style={{
-              borderColor: '#C4AAD9',
-              background: 'linear-gradient(135deg, #C4AAD908 0%, #9CAE8908 50%, #E8B4B408 100%)'
-            }}>
-              <div className="flex justify-center items-center space-x-8">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-900">50+</div>
-                  <div className="text-sm text-gray-600">Event Vendors</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-900">25+</div>
-                  <div className="text-sm text-gray-600">US Cities</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-900">100%</div>
-                  <div className="text-sm text-gray-600">AI-Powered</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-gray-900">Free</div>
-                  <div className="text-sm text-gray-600">Sign Up & Listing</div>
-                </div>
-              </div>
-            </div>
+           
           </div>
           
           <div className="grid lg:grid-cols-2 gap-12 items-center">
