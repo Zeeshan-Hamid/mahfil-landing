@@ -11,18 +11,18 @@ interface Message {
 }
 
 const FAQ_QUESTIONS = [
-  "How does Mahfil help vendors find customers?",
+  "How does Mehfil help vendors find customers?",
   "What AI features are available for vendors?",
   "How does the AI assistant boost sales?",
   "What analytics do vendors get access to?",
-  "How do I get started as a vendor on Mahfil?",
-  "What types of cultural events does Mahfil support?",
+  "How do I get started as a vendor on Mehfil?",
+  "What types of cultural events does Mehfil support?",
   "How does AI-powered customer matching work?",
   "What support do vendors receive?",
   "How can I optimize my vendor profile?",
   "What are the benefits for cultural event vendors?",
-  "How does Mahfil handle cultural event planning?",
-  "What makes Mahfil different from other platforms?"
+  "How does Mehfil handle cultural event planning?",
+  "What makes Mehfil different from other platforms?"
 ];
 
 export default function Chatbot() {
@@ -31,7 +31,7 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      text: "Hello! I'm your Mahfil AI assistant. I can help you with event planning, vendor matching, and cultural events. How can I assist you today?",
+      text: "Hello! I'm your Mehfil AI assistant. I can help you with event planning, vendor matching, and cultural events. How can I assist you today?",
       isUser: false,
       timestamp: new Date()
     }
@@ -173,7 +173,7 @@ export default function Chatbot() {
                       <Bot className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold text-lg">Mahfil Assistant</h3>
+                      <h3 className="text-white font-semibold text-lg">Mhfil Assistant</h3>
                       <p className="text-white/80 text-sm">AI-Powered Event Help</p>
                     </div>
                   </div>
@@ -352,7 +352,7 @@ export default function Chatbot() {
                       <Bot className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-white font-semibold text-lg">Mahfil Assistant</h3>
+                      <h3 className="text-white font-semibold text-lg">Mehfil Assistant</h3>
                       <p className="text-white/80 text-sm">AI-Powered Event Help</p>
                     </div>
                   </div>
