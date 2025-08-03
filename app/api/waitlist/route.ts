@@ -6,12 +6,12 @@ export const dynamic = 'force-dynamic';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { email, businessName, userType } = body;
+    const { email, phoneNumber, businessName, userType } = body;
 
     // Validate required fields
-    if (!email || !userType) {
+    if (!email || !phoneNumber || !userType) {
       return NextResponse.json(
-        { error: 'Email and user type are required' },
+        { error: 'Email, phone number, and user type are required' },
         { status: 400 }
       );
     }
@@ -21,6 +21,16 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { error: 'Invalid email format' },
+        { status: 400 }
+      );
+    }
+
+    // Validate phone number format (basic validation)
+    const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+    const cleanPhone = phoneNumber.replace(/[\s\-\(\)]/g, '');
+    if (!phoneRegex.test(cleanPhone)) {
+      return NextResponse.json(
+        { error: 'Invalid phone number format' },
         { status: 400 }
       );
     }
@@ -54,9 +64,19 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Check if phone number already exists
+    const existingPhone = await collection.findOne({ phoneNumber });
+    if (existingPhone) {
+      return NextResponse.json(
+        { error: 'Phone number already registered' },
+        { status: 409 }
+      );
+    }
+
     // Create the document to insert
     const document = {
       email,
+      phoneNumber,
       userType,
       ...(userType === 'vendor' && businessName && { businessName }),
       createdAt: new Date(),

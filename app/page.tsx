@@ -75,6 +75,7 @@ const CountdownTimer = () => {
 
 export default function Home() {
   const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [businessName, setBusinessName] = useState('');
   const [userType, setUserType] = useState<'vendor' | 'couple'>('vendor');
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -94,6 +95,7 @@ export default function Home() {
         },
         body: JSON.stringify({
           email,
+          phoneNumber,
           businessName: userType === 'vendor' ? businessName : undefined,
           userType,
         }),
@@ -107,6 +109,7 @@ export default function Home() {
 
       setIsSubmitted(true);
       setEmail('');
+      setPhoneNumber('');
       setBusinessName('');
       setTimeout(() => setIsSubmitted(false), 5000);
     } catch (err) {
@@ -641,6 +644,18 @@ export default function Home() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="your@email.com"
+                        className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-200 focus:border-purple-400 outline-none text-lg transition-all"
+                        required
+                        disabled={isLoading}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-semibold text-gray-700">Phone Number</label>
+                      <input
+                        type="tel"
+                        value={phoneNumber}
+                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        placeholder="(555) 123-4567"
                         className="w-full px-6 py-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-purple-200 focus:border-purple-400 outline-none text-lg transition-all"
                         required
                         disabled={isLoading}
